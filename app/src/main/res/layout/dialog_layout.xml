@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/textViewDialog2"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="#87CEB1"
@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/textViewDialog1"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
@@ -28,8 +28,8 @@
 
     <Button
         android:id="@+id/buttonDialog"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:background="#CDB996"
         android:text="Запомнил!"

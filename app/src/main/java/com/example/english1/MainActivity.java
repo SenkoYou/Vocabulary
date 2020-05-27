@@ -7,6 +7,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnWrite;//добавление кнопки записи
     Button btnDelete;//добавление кнопки удаления
     //
+    class MyAsyncTask extends AsyncTask<String, Void, Void> {
+        @Override
+        protected Void doInBackground(String... strings) {
+            dbvoc.getDataFromSqlite();
+            return null;
+        }
+
+        @Override
+        protected void onPreExecute() {
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,22 +85,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //Подключение диалогового окна
         final Dialog dialog = new Dialog(MainActivity.this);
-
-        TextView DialogView = (TextView) findViewById(R.id.textViewDialog1);
-
-        dialog.setContentView(R.layout.activity_dialog);
+        dialog.setContentView(R.layout.dialog_layout);
         Button buttonDialog = (Button) dialog.findViewById(R.id.buttonDialog);
-        buttonDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-
-        dialog.setCancelable(false);
-        dialog.setTitle("Запомни!");
-        dialog.show();
-
+        TextView textDialog = (TextView) dialog.findViewById(R.id.textViewDialog1);
+        SQLiteDatabase database = dbvoc.getReadableDatabase(); //экземпляр базы данных, который можно только прочесть
+        //рандомное слово
+        Cursor cursor = database.query(DBvoc.TABLE_CONSTANTS,null, null, null, null, null, null);
+        if(cursor.moveToFirst()) {
+            cursor.moveToPosition((int) (Math.random() * 100));
+            int idRussian = cursor.getColumnIndex(DBvoc.KEY_RUSSIAN);
+            int idEnglish = cursor.getColumnIndex(DBvoc.KEY_ENGLISH);
+            textDialog.setText(cursor.getString(idRussian) + " - это " + "\n" + cursor.getString(idEnglish));
+            cursor.close();
+            buttonDialog.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+            dialog.setCancelable(false);
+            dialog.show();
+        }
     }
 
     @Override

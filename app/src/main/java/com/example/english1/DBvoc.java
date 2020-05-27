@@ -1,8 +1,11 @@
 package com.example.english1;
 
+import android.app.Activity;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -31,5 +34,26 @@ public class DBvoc extends SQLiteOpenHelper {
         db.execSQL("drop table if exists " + TABLE_CONSTANTS);
 
         onCreate(db);
+    }
+    public final Activity getActivity() {
+        return null;
+    }
+    public void getDataFromSqlite() {
+        Cursor cursor = null;
+        DBvoc mHelper = new DBvoc(getActivity().getApplicationContext());
+        SQLiteDatabase db = mHelper.getWritableDatabase();
+        String queryString = "select russianWords , englishWords" +
+                "from english " +
+                "order by rand()";
+        Log.d("queryString", queryString.toString());
+
+
+        try {
+            cursor = db.rawQuery(queryString, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            cursor.close();
+        }
     }
 }
