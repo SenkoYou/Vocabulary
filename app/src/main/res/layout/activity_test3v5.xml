@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#87CEB1"
+    android:orientation="vertical"
+    tools:context=".test3v5">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#87CEB1">
+
+
+        <TextView
+            android:id="@+id/test3"
+            android:layout_width="250px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFE7BD"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:text="RACCOON"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="60sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#87CEB1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/png_line_2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1451dp"
+        android:layout_weight="1"
+        android:background="#87CEB1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="221dp"
+            android:background="#000000">
+
+            <Button
+                android:id="@+id/raccoon1"
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:background="#CDB996"
+                android:text="Ответить" />
+
+            <ImageView
+                android:id="@+id/raccoon"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:background="#87CEB1"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/raccoon" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/png_line_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="221dp">
+
+            <Button
+                android:id="@+id/tiger1"
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:background="#CDB996"
+                android:text="Ответить" />
+
+            <ImageView
+                android:id="@+id/tiger"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:background="#87CEB1"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/tiger" />
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/png_line_2" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="221dp">
+
+            <Button
+                android:id="@+id/giraffe1"
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:background="#CDB996"
+                android:text="Ответить" />
+
+            <ImageView
+                android:id="@+id/giraffe"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:background="#87CEB1"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/giraffe" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

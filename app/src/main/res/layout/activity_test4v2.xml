@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#87CEB1"
+    android:orientation="vertical"
+    tools:context=".test4v2">
+
+    <ImageView
+        android:id="@+id/l4"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <TextView
+        android:id="@+id/header4v2"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:background="#CDB996"
+        android:text="Выберите пропущенное слово"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"/>
+
+    <ImageView
+        android:id="@+id/l5"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <TextView
+        android:id="@+id/question4v2"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="#FFE7BD"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:text="We are ____ at Literature."
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="60sp" />
+
+    <ImageView
+        android:id="@+id/l6"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/b1t4v2"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="#CDB996"
+            android:text="singing songs"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/b2t4v2"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="#CDB996"
+            android:text="reading and speaking"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/b3t4v2"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:layout_weight="1"
+            android:text="painting"
+            android:layout_margin="10dp"
+            android:background="#CDB996"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/b4t4v2"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:layout_weight="1"
+            android:text="running and jumping"
+            android:layout_margin="10dp"
+            android:background="#CDB996"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+    </LinearLayout>
+</LinearLayout>

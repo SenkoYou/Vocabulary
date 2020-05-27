@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#87CEB1"
+    android:orientation="vertical"
+    tools:context=".test1v2">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="264dp"
+        android:background="#87CEB1">
+
+        <TextView
+            android:id="@+id/test1"
+            android:layout_width="250px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#87CEB1"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:text="'See' переводится как 'Идти'?"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="55dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1451dp"
+        android:layout_weight="1"
+        android:background="#87CEB1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/li1"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/png_line_2" />
+
+        <Button
+            android:id="@+id/yes1v2"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:background="#FFE7BD"
+            android:fontFamily="serif"
+            android:gravity="center_horizontal"
+            android:text="YES"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="75dp" />
+
+        <ImageView
+            android:id="@+id/li4"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/png_line_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:orientation="vertical"></LinearLayout>
+
+        <ImageView
+            android:id="@+id/li2"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/png_line_2" />
+
+        <Button
+            android:id="@+id/no1v2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#FFE7BD"
+            android:fontFamily="serif"
+            android:gravity="center_horizontal"
+            android:text="NO"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="75dp" />
+
+        <ImageView
+            android:id="@+id/li3"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#000000"
+            app:srcCompat="@drawable/png_line_2" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

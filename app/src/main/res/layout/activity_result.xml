@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#87CEB1"
+    android:orientation="vertical"
+    tools:context=".result">
+
+    <ImageView
+        android:id="@+id/liniya1"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="#FFE7BD"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="Results:"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="55dp" />
+
+    <ImageView
+        android:id="@+id/liniya3"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <TextView
+        android:id="@+id/pointres"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:background="#FFE7BD"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="50dp" />
+
+    <ImageView
+        android:id="@+id/liniya2"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <TextView
+        android:id="@+id/test1res"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFE7BD"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/liniya4"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <TextView
+        android:id="@+id/test2res"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFE7BD"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/liniya7"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <TextView
+        android:id="@+id/test3res"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFE7BD"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/liniya8"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <TextView
+        android:id="@+id/test4res"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFE7BD"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/liniya6"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/liniya"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <Button
+        android:id="@+id/bmenu"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#FFE7BD"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="MENU"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="50dp" />
+
+    <ImageView
+        android:id="@+id/liniya5"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/liniyare1"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/png_line_2" />
+
+    <Button
+        android:id="@+id/replay"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#FFE7BD"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="Replay"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/liniyare2"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/png_line_2" />
+
+
+</LinearLayout>
