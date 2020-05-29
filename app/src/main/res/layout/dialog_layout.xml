@@ -33,5 +33,6 @@
         android:layout_gravity="center_horizontal"
         android:background="#CDB996"
         android:text="Запомнил!"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:textColor="@android:color/black"/>
 </LinearLayout>
