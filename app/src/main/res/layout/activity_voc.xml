@@ -8,12 +8,22 @@
     android:background="#87CEB1"
     android:orientation="vertical"
     tools:context=".voc">
+
     <Button
         android:id="@+id/btnRead"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="74dp"
+        android:background="#FFE7BD"
         android:text="Открыть словарь"
-        android:background="#FFE7BD"/>
+        android:textSize="30sp"/>
+
+    <ImageView
+        android:id="@+id/li"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/png_line_2" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
         android:textSize="30sp"
         android:textColor="@android:color/black"/>
     </ScrollView>

@@ -35,25 +35,4 @@ public class DBvoc extends SQLiteOpenHelper {
 
         onCreate(db);
     }
-    public final Activity getActivity() {
-        return null;
-    }
-    public void getDataFromSqlite() {
-        Cursor cursor = null;
-        DBvoc mHelper = new DBvoc(getActivity().getApplicationContext());
-        SQLiteDatabase db = mHelper.getWritableDatabase();
-        String queryString = "select russianWords , englishWords" +
-                "from english " +
-                "order by rand()";
-        Log.d("queryString", queryString.toString());
-
-
-        try {
-            cursor = db.rawQuery(queryString, null);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            cursor.close();
-        }
-    }
 }
