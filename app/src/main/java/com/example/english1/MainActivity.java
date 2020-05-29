@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(activity == 0){
+        if (activity == 0) {
             activity = activity + 1;
         }
 
@@ -61,19 +61,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onClick(View v) {
-                if(activity == 1){
+                if (activity == 1) {
                     Intent intent = new Intent(getApplicationContext(), test1.class);
                     startActivity(intent);
-                }else if (activity == 2){
+                } else if (activity == 2) {
                     Intent intent = new Intent(getApplicationContext(), test1v2.class);
                     startActivity(intent);
-                }else if (activity == 3){
+                } else if (activity == 3) {
                     Intent intent = new Intent(getApplicationContext(), test1v3.class);
                     startActivity(intent);
-                }else if (activity == 4){
+                } else if (activity == 4) {
                     Intent intent = new Intent(getApplicationContext(), test1v4.class);
                     startActivity(intent);
-                }else if (activity == 5){
+                } else if (activity == 5) {
                     Intent intent = new Intent(getApplicationContext(), test1v5.class);
                     startActivity(intent);
                 }
@@ -91,22 +91,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView textDialog = (TextView) dialog.findViewById(R.id.textViewDialog1);
         SQLiteDatabase database = dbvoc.getReadableDatabase(); //экземпляр базы данных, который можно только прочесть
         //рандомное слово
-        Cursor cursor = database.query(DBvoc.TABLE_CONSTANTS,null, null, null, null, null, null);
-        if(cursor.moveToFirst()) {
-            cursor.moveToPosition((int) (Math.random() * 100));
-            int idRussian = cursor.getColumnIndex(DBvoc.KEY_RUSSIAN);
-            int idEnglish = cursor.getColumnIndex(DBvoc.KEY_ENGLISH);
-            textDialog.setText(cursor.getString(idRussian) + " - это " + "\n" + cursor.getString(idEnglish));
-            cursor.close();
-            buttonDialog.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dialog.dismiss();
-                }
-            });
-            dialog.setCancelable(false);
-            dialog.show();
-        }
+        Cursor cursor = database.query(DBvoc.TABLE_CONSTANTS, null, null, null, null, null, null);
+
+        cursor.moveToPosition((int) (Math.random() * 100));
+        int idRussian = cursor.getColumnIndex(DBvoc.KEY_RUSSIAN);
+        int idEnglish = cursor.getColumnIndex(DBvoc.KEY_ENGLISH);
+        textDialog.setText(cursor.getString(idEnglish) + "- это " + "\n" + cursor.getString(idRussian));
+        cursor.close();
+        buttonDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.setCancelable(false);
+        dialog.show();
     }
 
     @Override
@@ -118,10 +117,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         case R.id.voc_btn:
                 database.delete(DBvoc.TABLE_CONSTANTS,null,null);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Угол");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Angle");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Angle ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Муравей");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Ant");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Ant ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Яблоко ");
             contentValues.put(DBvoc.KEY_ENGLISH, "Apple ");
@@ -195,9 +194,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             contentValues.put(DBvoc.KEY_ENGLISH, "Brake ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
 
-            contentValues.put(DBvoc.KEY_RUSSIAN,
-
-                    "Кирпич");
+            contentValues.put(DBvoc.KEY_RUSSIAN, "Кирпич");
             contentValues.put(DBvoc.KEY_ENGLISH, "Brick ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Щётка");
@@ -281,28 +278,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             contentValues.put(DBvoc.KEY_ENGLISH, "Farm ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Перо, украшать");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Feather");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Feather ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Палец ");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Finger");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Finger ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Рыба");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Fish");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Fish ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Флаг");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Flag");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Flag ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Пол, этаж");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Floor");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Floor ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Муха, лететь");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Fly");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Fly ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Нога");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Foot");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Foot ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Рамка");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Frame");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Frame ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Сад");
             contentValues.put(DBvoc.KEY_ENGLISH, "Garden ");
@@ -314,17 +311,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             contentValues.put(DBvoc.KEY_RUSSIAN, "Перчатка");
             contentValues.put(DBvoc.KEY_ENGLISH, "Glove ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
-            contentValues.put(DBvoc.KEY_RUSSIAN, "Коза ");
+            contentValues.put(DBvoc.KEY_RUSSIAN, "Коза");
             contentValues.put(DBvoc.KEY_ENGLISH, "Goat ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Оружие");
             contentValues.put(DBvoc.KEY_ENGLISH, "Gun ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Волосы");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Hair");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Hair ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Молоток");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Hammer");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Hammer ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Рука");
             contentValues.put(DBvoc.KEY_ENGLISH, "Hand ");
@@ -356,7 +353,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
 
             contentValues.put(DBvoc.KEY_RUSSIAN, "Нож");
-
             contentValues.put(DBvoc.KEY_ENGLISH, "Knife ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Узел");
@@ -410,7 +406,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             contentValues.put(DBvoc.KEY_ENGLISH, "Nut ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Офис");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Office");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Office ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Апельсин");
             contentValues.put(DBvoc.KEY_ENGLISH, "Orange ");
@@ -436,7 +432,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 // 100
 
             contentValues.put(DBvoc.KEY_RUSSIAN, "Булавка");
-
             contentValues.put(DBvoc.KEY_ENGLISH, "Pin ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Труба");
@@ -451,8 +446,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             contentValues.put(DBvoc.KEY_RUSSIAN, "Картофель");
             contentValues.put(DBvoc.KEY_ENGLISH, "Potato ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
-            contentValues.put(DBvoc.KEY_RUSSIAN, "Горшок ");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Pot");
+            contentValues.put(DBvoc.KEY_RUSSIAN, "Горшок");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Pot ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Рельс");
             contentValues.put(DBvoc.KEY_ENGLISH, "Rail ");
@@ -515,8 +510,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
 
             contentValues.put(DBvoc.KEY_RUSSIAN, "Весна ");
-
-            contentValues.put(DBvoc.KEY_ENGLISH, "Spring");
+            contentValues.put(DBvoc.KEY_ENGLISH, "Spring ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
             contentValues.put(DBvoc.KEY_RUSSIAN, "Палка");
             contentValues.put(DBvoc.KEY_ENGLISH, "Stick ");
@@ -577,9 +571,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             contentValues.put(DBvoc.KEY_RUSSIAN, "Крыло");
             contentValues.put(DBvoc.KEY_ENGLISH, "Wing ");
             database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
-            contentValues.put(DBvoc.KEY_RUSSIAN, "Червь");
-            contentValues.put(DBvoc.KEY_ENGLISH, "Worm ");
-            database.insert(DBvoc.TABLE_CONSTANTS, null, contentValues);
+            //145
             Intent intent = new Intent(getApplicationContext(), voc.class);
             startActivity(intent);
                 break;

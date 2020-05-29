@@ -47,13 +47,13 @@ public class voc extends AppCompatActivity implements View.OnClickListener {
                     int idEnglish = cursor.getColumnIndex(DBvoc.KEY_ENGLISH);
 
                     LinkedList<String> List = new LinkedList<>();// создается массив, чтобы можно было сохранить туда данные строки
-                    List.add(0,cursor.getString(idEnglish) + " - " + cursor.getString(idRussian));//заполняется первый элемент
+                    List.add(0,cursor.getString(idEnglish) + "- " + cursor.getString(idRussian));//заполняется первый элемент
                     int i = 1;//переменная, чтобы можно было перебирать последующие элементы и выводить по одному
                     while (cursor.moveToNext()){//пока можно перейти на следующий элемент, делаем это...
                         int idIndexNext = cursor.getColumnIndex(DBvoc.KEY_ID);
                         int idRussianNext = cursor.getColumnIndex(DBvoc.KEY_RUSSIAN);
                         int idEnglishNext = cursor.getColumnIndex(DBvoc.KEY_ENGLISH);
-                        List.add(i,cursor.getString(idEnglishNext) + " - " + cursor.getString(idRussianNext));//заполняются остальные элементы массива
+                        List.add(i,cursor.getString(idEnglishNext) + "- " + cursor.getString(idRussianNext));//заполняются остальные элементы массива
                         i++;
                     };
                     for(int j = 0; j < List.size(); j++){//конструкция, чтобы можно было вывести все элементы, а не только последний
